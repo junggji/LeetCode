@@ -1,0 +1,28 @@
+package Codingtest;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static java.lang.Math.ceil;
+import static java.lang.Math.max;
+
+public class Ct4 {
+    static int[] nums = {1,2,5,2,3};
+
+    public static List<Integer> targetIndices(int[] nums, int target) {
+        Arrays.sort(nums);      // 배열 정렬
+        List<Integer> list1 = new ArrayList<>();
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i] == target) {
+                list1.add(i);   // 일치하는 배열의 index값을 list1배열로 저장
+            }
+        }
+        return list1;
+    }
+
+        public static void main (String[]args){
+            System.out.println(targetIndices(nums,2));
+
+        }
+    }
