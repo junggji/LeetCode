@@ -1,0 +1,21 @@
+package Codingtest;
+
+import java.util.Arrays;
+
+public class Ct4 {
+    static int[] stones = {1,3};//
+
+    public static int[] lastStoneWeight(int[] stones) {
+        for(int i=stones.length-1; i>=1; i--){
+            Arrays.sort(stones);
+            stones[i-1] = stones[i] - stones[i-1];
+        }
+
+        return stones;
+    }
+
+        public static void main (String[]args){
+            System.out.println(Arrays.toString(lastStoneWeight(stones)));
+
+        }
+    }
